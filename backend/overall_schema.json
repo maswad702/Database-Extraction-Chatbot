@@ -1,0 +1,839 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "Machine Vision Requirements, Observations and Solutions",
+    "type": "object",
+    "properties": {
+        "BIZ_OBJ": {
+            "type": "object",
+            "properties": {
+              "Problem Statement": {
+                "type": "string",
+                "description": "A brief Problem Statement of the requirement",
+                "dealStage": "Discovery"
+              },
+              "Current Inspection Methods": {
+                "type": "string",
+                "description": "Description of the client's current methods for inspection.",
+                "dealStage": "Discovery"
+              },
+              "Challenges with Current System": {
+                "type": "string",
+                "description": "Specific issues or challenges faced with the current inspection methods.",
+                "dealStage": "Discovery"
+              },
+              "Desired Improvements": {
+                "type": "string",
+                "description": "Improvements the client wishes to achieve with the new system.",
+                "dealStage": "Discovery"
+              },
+              "Budget Constraints": {
+                "type": "string",
+                "description": "The client's budget for the system to tailor a cost-effective solution.",
+                "dealStage": "Discovery"
+              },
+              "Key Performance Indicators (KPIs)": {
+                "type": "string",
+                "description": "Metrics to measure the success of the vision system.",
+                "dealStage": "Initial RA"
+              },
+              "Return on Investment (ROI) Criteria": {
+                "type": "string",
+                "description": "Client's criteria for ROI on the vision system.",
+                "dealStage": "Initial RA"
+              },
+              "Future Scalability Needs": {
+                "type": "string",
+                "description": "Anticipated future requirements or expansions.",
+                "dealStage": "Initial RA"
+              },
+              "Integration with Existing Systems": {
+                "type": "string",
+                "description": "How the vision system needs to integrate with current business systems.",
+                "dealStage": "Initial RA"
+              },
+              "Compliance Requirements": {
+                "type": "string",
+                "description": "Any regulatory or industry compliance requirements.",
+                "dealStage": "Initial RA"
+              },
+              "Environmental Impact Considerations": {
+                "type": "string",
+                "description": "Any environmental goals or standards to adhere to.",
+                "dealStage": "Initial RA"
+              }
+            },
+            "required": [
+              "Problem Statement",
+              "Current Inspection Methods",
+              "Challenges with Current System",
+              "Desired Improvements",
+              "Budget Constraints",
+              "Key Performance Indicators (KPIs)",
+              "Return on Investment (ROI) Criteria",
+              "Future Scalability Needs",
+              "Integration with Existing Systems",
+              "Compliance Requirements",
+              "Environmental Impact Considerations"
+            ]
+          },
+          "PROD_VARIANT_INFO": {
+            "type": "object",
+            "properties": {
+              "Product Name/ID": {
+                "type": "string",
+                "description": "Unique Name or identifier for the product that needs to be inspected.",
+                "dealStage": "Discovery"
+              },
+              "Product Description": {
+                "type": "string",
+                "description": "Brief overview of the product, its use, and key features.",
+                "dealStage": "Discovery"
+              },
+              "Product Image Upload": {
+                "type": "string",
+                "description": "Option for users to upload images of the product for visual reference.",
+                "dealStage": "Discovery"
+              },
+              "Inspection Purpose": {
+                "type": "string",
+                "description": "Brief description of why the product needs inspection (e.g., quality control, compliance, etc.).",
+                "dealStage": "Discovery"
+              },
+              "Dimensions": {
+                "type": "string",
+                "description": "Min and Max Dimensions of the product.",
+                "dealStage": "Initial RA"
+              },
+              "Usage Context": {
+                "type": "string",
+                "description": "Description of where and how the product is used.",
+                "dealStage": "Initial RA"
+              },
+              "Criticality": {
+                "type": "string",
+                "description": "Importance and Role of the inspection process in its usage context.",
+                "dealStage": "Initial RA"
+              },
+              "Variant Names/IDs": {
+                "type": "string",
+                "description": "Unique identifiers for each variant.",
+                "dealStage": "Initial RA"
+              },
+              "Variant Descriptions": {
+                "type": "string",
+                "description": "Descriptions highlighting differences between variants.",
+                "dealStage": "Initial RA"
+              },
+              "Size Range": {
+                "type": "string",
+                "description": "Minimum and maximum dimensions for all variants.",
+                "dealStage": "Initial RA"
+              },
+              "Variant-Specific Features": {
+                "type": "string",
+                "description": "Notable features unique to certain variants.",
+                "dealStage": "Initial RA"
+              },
+              "Variant Images": {
+                "type": "string",
+                "description": "Option to upload images for variants.",
+                "dealStage": "Initial RA"
+              },
+              "Production Volume": {
+                "type": "string",
+                "description": "Annual/Monthly Production Voume (total as well as Variant wise breakup).",
+                "dealStage": "Discovery"
+              },
+              "Product 3D Model": {
+                "type": "string",
+                "description": "Option to upload a 3D model of the product.",
+                "dealStage": "Initial RA"
+              }
+            },
+            "required": [
+              "Product Name/ID",
+              "Product Description",
+              "Product Image Upload",
+              "Inspection Purpose",
+              "Dimensions",
+              "Usage Context",
+              "Criticality",
+              "Variant Names/IDs",
+              "Variant Descriptions",
+              "Size Range",
+              "Variant-Specific Features",
+              "Variant Images",
+              "Production Volume",
+              "Product 3D Model"
+            ]
+          },
+          "MATERIAL_HANDLING": {
+            "type": "object",
+            "properties": {
+              "Material Handling Method": {
+                "type": "string",
+                "description": "How products are transported to the inspection area.",
+                "dealStage": "Initial RA"
+              },
+              "Loading": {
+                "type": "string",
+                "description": "Description of how parts are loaded into the inspection system.",
+                "dealStage": "Initial RA"
+              },
+              "Handling Speed": {
+                "type": "string",
+                "description": "Speed at which products are handled or moved.",
+                "dealStage": "Initial RA"
+              },
+              "Part Movement During Inspection": {
+                "type": "string",
+                "description": "Specifies whether the part is moving or stationary during the inspection process.",
+                "dealStage": "Initial RA"
+              },
+              "FAIL/Rejection Action (NG components)": {
+                "type": "string",
+                "description": "How rejected (Not Good) components are managed and what action should be taken.",
+                "dealStage": "Initial RA"
+              },
+              "PASS Action": {
+                "type": "string",
+                "description": "What happens when a part is passed by the vision system.",
+                "dealStage": "Initial RA"
+              },
+              "Variant Change Over": {
+                "type": "string",
+                "description": "How the system manages changes between different product variants.",
+                "dealStage": "SOW"
+              },
+              "Mechanical Drawings": {
+                "type": "string",
+                "description": "Option to upload or describe mechanical drawings related to material handling.",
+                "dealStage": "Initial RA"
+              },
+              "Images/Video of the Existing Line": {
+                "type": "string",
+                "description": "Visual reference of the current material handling setup.",
+                "dealStage": "Initial RA"
+              },
+              "Variants": {
+                "type": "string",
+                "description": "List all different variants in the scope of this inspection and mention any out-of-scope variants.",
+                "dealStage": "Initial RA"
+              },
+              "Cycle Time": {
+                "type": "string",
+                "description": "Describe cycle time and inspection speed.",
+                "dealStage": "Initial RA"
+              },
+              "Inputs to Vision System": {
+                "type": "string",
+                "description": "Inputs from external systems interfaced with the vision system.",
+                "dealStage": "Initial RA"
+              },
+              "Outputs from Vision System": {
+                "type": "string",
+                "description": "Outputs like PNP, TTL, EthernetIP, and interfacing details.",
+                "dealStage": "Initial RA"
+              },
+              "LOCATE FAILED/UNKNOWN/ERROR Action": {
+                "type": "string",
+                "description": "What happens in scenarios of failed, unknown, or error detections.",
+                "dealStage": "SOW"
+              },
+              "Other Requirements": {
+                "type": "string",
+                "description": "Open text for any other material handling requirements.",
+                "dealStage": "Initial RA"
+              },
+              "Special Handling Requirements": {
+                "type": "string",
+                "description": "Specific conditions required for handling, like temperature control or fragility considerations.",
+                "dealStage": "SOW"
+              },
+              "Specifications/Standards Compliance": {
+                "type": "string",
+                "description": "List of specific standards or specifications the system must comply with.",
+                "dealStage": "SOW"
+              },
+              "Material Standards": {
+                "type": "string",
+                "description": "Specifies the material standards required for the components.",
+                "dealStage": "SOW"
+              }
+            },
+            "required": [
+              "Material Handling Method",
+              "Loading",
+              "Handling Speed",
+              "Part Movement During Inspection",
+              "FAIL/Rejection Action (NG components)",
+              "PASS Action",
+              "Variant Change Over",
+              "Mechanical Drawings",
+              "Images/Video of the Existing Line",
+              "Variants",
+              "Cycle Time",
+              "Inputs to Vision System",
+              "Outputs from Vision System",
+              "LOCATE FAILED/UNKNOWN/ERROR Action",
+              "Other Requirements",
+              "Special Handling Requirements",
+              "Specifications/Standards Compliance",
+              "Material Standards"
+            ]
+          },
+          "SOFTWARE": {
+            "type": "object",
+            "properties": {
+              "Operator Permitted Actions": {
+                "type": "string",
+                "description": "List of actions the operator is allowed to perform.",
+                "dealStage": "SOW"
+              },
+              "Operator Restricted Actions": {
+                "type": "string",
+                "description": "Actions the operator is not allowed to perform.",
+                "dealStage": "SOW"
+              },
+              "Variant Selection Mechanism": {
+                "type": "string",
+                "description": "How variant information is communicated to the vision system.",
+                "dealStage": "SOW"
+              },
+              "Feedback Mechanisms": {
+                "type": "string",
+                "description": "Any operator alerts or notifications.",
+                "dealStage": "SOW"
+              },
+              "Language Preferences": {
+                "type": "string",
+                "description": "Preferred languages for the interface.",
+                "dealStage": "SOW"
+              },
+              "Database Integration": {
+                "type": "string",
+                "description": "Details on the integration with external databases for data management.",
+                "dealStage": "Initial RA"
+              },
+              "ERP Integration": {
+                "type": "string",
+                "description": "Information on integration with Enterprise Resource Planning systems.",
+                "dealStage": "Initial RA"
+              },
+              "Image Backup Requirements": {
+                "type": "string",
+                "description": "Parameters for image data backup.",
+                "dealStage": "SOW"
+              },
+              "Backup Storage": {
+                "type": "string",
+                "description": "Preferred backup storage solution.",
+                "dealStage": "SOW"
+              },
+              "Production Line Feedback": {
+                "type": "string",
+                "description": "Result feedback to be communicated to the production line.",
+                "dealStage": "SOW"
+              }
+            },
+            "required": [
+              "Operator Permitted Actions",
+              "Operator Restricted Actions",
+              "Variant Selection Mechanism",
+              "Feedback Mechanisms",
+              "Language Preferences",
+              "Database Integration",
+              "ERP Integration",
+              "Image Backup Requirements",
+              "Backup Storage",
+              "Production Line Feedback"
+            ]
+          },
+          "CUSTOMER_DEPENDENCY": {
+            "type": "object",
+            "properties": {
+              "Space Requirements": {
+                "type": "string",
+                "description": "Information on the physical space needed for the system.",
+                "dealStage": "Initial RA"
+              },
+              "Internet Connectivity": {
+                "type": "string",
+                "description": "What kind of internet connectivity can be provided for remote training and testing and later for troubleshooting.",
+                "dealStage": "SOW"
+              },
+              "Power": {
+                "type": "string",
+                "description": "Details about power supply and network connectivity requirements.",
+                "dealStage": "SOW"
+              },
+              "Test and Train Samples": {
+                "type": "string",
+                "description": "Whether the customer can provide sufficient sample products for training the system as well as for testing and system calibration.",
+                "dealStage": "SOW"
+              },
+              "On-site Support": {
+                "type": "string",
+                "description": "Information about the level of on-site support and training required for the client.",
+                "dealStage": "SOW"
+              },
+              "Environmental Conditions": {
+                "type": "string",
+                "description": "Specific environmental factors where the system will be deployed, such as temperature, humidity, lighting, and contaminants.",
+                "dealStage": "Initial RA"
+              },
+              "User Profiles and Skill Levels": {
+                "type": "string",
+                "description": "Technical expertise and training requirements of the end-users of the system.",
+                "dealStage": "Initial RA"
+              },
+              "Regulatory and Compliance Requirements": {
+                "type": "string",
+                "description": "Industry-specific regulations or standards the system must comply with.",
+                "dealStage": "SOW"
+              },
+              "Maintenance and Support Requirements": {
+                "type": "string",
+                "description": "Maintenance needs, expected system lifespan, and support requirements.",
+                "dealStage": "SOW"
+              },
+              "Performance Metrics and Success Criteria": {
+                "type": "string",
+                "description": "Specific performance metrics expected from the system and how success is defined.",
+                "dealStage": "Initial RA"
+              },
+              "Risk Assessment": {
+                "type": "string",
+                "description": "Potential risks or challenges in implementing the system for proactive planning.",
+                "dealStage": "Initial RA"
+              }
+            },
+            "required": [
+              "Space Requirements",
+              "Internet Connectivity",
+              "Power",
+              "Test and Train Samples",
+              "On-site Support",
+              "Environmental Conditions",
+              "User Profiles and Skill Levels",
+              "Regulatory and Compliance Requirements",
+              "Maintenance and Support Requirements",
+              "Performance Metrics and Success Criteria",
+              "Risk Assessment"
+            ]
+          },
+          "ACCEPTANCE": {
+            "type": "object",
+            "properties": {
+              "Acceptance Test Criteria": {
+                "type": "string",
+                "description": "Specific criteria that the vision system must meet for acceptance.",
+                "dealStage": "Initial RA"
+              },
+              "Trial Period": {
+                "type": "string",
+                "description": "The duration of the testing phase before final acceptance.",
+                "dealStage": "Initial RA"
+              },
+              "Sample Size for Testing": {
+                "type": "string",
+                "description": "Number of samples to be tested during the acceptance phase.",
+                "dealStage": "Initial RA"
+              },
+              "Failure Thresholds": {
+                "type": "string",
+                "description": "Defined limits for what constitutes a failure during testing.",
+                "dealStage": "Initial RA"
+              },
+              "Reporting Requirements": {
+                "type": "string",
+                "description": "Details on reporting format and frequency during the trial period.",
+                "dealStage": "Initial RA"
+              },
+              "On-Site Evaluation": {
+                "type": "string",
+                "description": "Requirement for on-site testing as part of the acceptance process.",
+                "dealStage": "Initial RA"
+              },
+              "Post-Implementation Review": {
+                "type": "string",
+                "description": "Schedule and criteria for reviewing the system's performance post-implementation.",
+                "dealStage": "Initial RA"
+              },
+              "User Training Completion": {
+                "type": "string",
+                "description": "Confirmation that user training has been successfully completed.",
+                "dealStage": "Initial RA"
+              },
+              "System Integration Test": {
+                "type": "string",
+                "description": "Testing the system's integration with existing processes and equipment.",
+                "dealStage": "Initial RA"
+              },
+              "Final Acceptance Sign-off": {
+                "type": "string",
+                "description": "Process for formally accepting the system, including any necessary documentation or approvals.",
+                "dealStage": "Initial RA"
+              }
+            },
+            "required": [
+              "Acceptance Test Criteria",
+              "Trial Period",
+              "Sample Size for Testing",
+              "Failure Thresholds",
+              "Reporting Requirements",
+              "On-Site Evaluation",
+              "Post-Implementation Review",
+              "User Training Completion",
+              "System Integration Test",
+              "Final Acceptance Sign-off"
+            ]
+          },
+          "Observation": {
+            "type": "object",
+            "properties": {
+              "ObservationName": {
+                "type": "string",
+                "description": "This is the name of the observation."
+              },
+              "DefectObservationDescription": {
+                "type": "string",
+                "description": "Detailed description of the defect or observation to be detected or measured."
+              },
+              "SubFOV_Dimension": {
+                "type": "string",
+                "description": "This is the subset of the product dimension where this observation will be present."
+              },
+              "LocationForObservation": {
+                "type": "string",
+                "description": "Precise location on the product where the observation is to be made (annotated on the 3D model)."
+              },
+              "ObservationType": {
+                "type": "string",
+                "enum": [
+                  "2D Measurement",
+                  "Anomaly Detection",
+                  "Print Defect",
+                  "Counting",
+                  "3D Measurement",
+                  "Presence/Absence",
+                  "OCR",
+                  "Code Reading",
+                  "Mismatch Detection",
+                  "Classification",
+                  "Assembly Verification",
+                  "Color Verification"
+                ],
+                "description": "Category of the observation based on a predefined list of parameters."
+              },
+              "AccuracyAndPrecisionLevels": {
+                "type": "string",
+                "enum": [
+                  "High",
+                  "Medium",
+                  "Low"
+                ],
+                "description": "Levels of accuracy and precision required for this observation."
+              },
+              "ObservationImageWithAnnotations": {
+                "type": "string",
+                "description": "Provision for users to upload images of the product with annotated observations."
+              },
+              "ObservationSubParameters": {
+                "type": "object",
+                "oneOf": [
+                  {
+                    "properties": {
+                      "ObservationType": {
+                        "const": "2D Measurement"
+                      },
+                      "dimensionsToBeMeasured": {
+                        "type": "string",
+                        "description": "Dimensions to be measured.",
+                        "example": "Diameter, thickness, etc."
+                      },
+                      "dimensionRange": {
+                        "type": "string",
+                        "description": "Dimension range.",
+                        "example": "100mm +/- .01mm"
+                      },
+                      "toleratedErrorOfMeasurement": {
+                        "type": "string",
+                        "description": "Tolerated error of measurement.",
+                        "example": "10 microns"
+                      }
+                    },
+                    "required": [
+                      "dimensionsToBeMeasured",
+                      "dimensionRange",
+                      "toleratedErrorOfMeasurement"
+                    ]
+                  },
+                  {
+                    "properties": {
+                      "ObservationType": {
+                        "const": "Anomaly Detection"
+                      },
+                      "typesOfAnomalyDefectsToDetect": {
+                        "type": "string",
+                        "description": "Types of anomaly defects to detect.",
+                        "example": "Scratches, dents, corrosion"
+                      },
+                      "minimumDefectSize": {
+                        "type": "string",
+                        "description": "Minimum defect size.",
+                        "example": "Minimum detectable size: 0.5 mm"
+                      }
+                    },
+                    "required": [
+                      "typesOfAnomalyDefectsToDetect",
+                      "minimumDefectSize"
+                    ]
+                  },
+                  {
+                    "properties": {
+                      "ObservationType": {
+                        "const": "Print Defect"
+                      },
+                      "typesOfPrintDefectsToIdentify": {
+                        "type": "string",
+                        "description": "Types of print defects to identify.",
+                        "example": "Smudging, misalignment"
+                      },
+                      "minimumDefectSize": {
+                        "type": "string",
+                        "description": "Minimum defect size.",
+                        "example": "Up to 2 mm"
+                      }
+                    },
+                    "required": [
+                      "typesOfPrintDefectsToIdentify",
+                      "minimumDefectSize"
+                    ]
+                  },
+                  {
+                    "properties": {
+                      "ObservationType": {
+                        "const": "Counting"
+                      },
+                      "typesOfObjectsOrFeaturesToCount": {
+                        "type": "string",
+                        "description": "Types of objects/features to count.",
+                        "example": "Individual components, features"
+                      },
+                      "minMaxObjectCount": {
+                        "type": "string",
+                        "description": "Minimum and maximum object count.",
+                        "example": "Min = 0, Max = 100"
+                      }
+                    },
+                    "required": [
+                      "typesOfObjectsOrFeaturesToCount",
+                      "minMaxObjectCount"
+                    ]
+                  },
+                  {
+                    "properties": {
+                      "ObservationType": {
+                        "const": "3D Measurement"
+                      },
+                      "volumeOrSpatialMeasurementsNeeded": {
+                        "type": "string",
+                        "description": "Volume or spatial measurements needed.",
+                        "example": "Volume, surface area"
+                      },
+                      "accuracyAndPrecisionLevels": {
+                        "type": "string",
+                        "description": "Accuracy and precision levels.",
+                        "example": "±0.1 mm"
+                      }
+                    },
+                    "required": [
+                      "volumeOrSpatialMeasurementsNeeded",
+                      "accuracyAndPrecisionLevels"
+                    ]
+                  },
+                  {
+                    "properties": {
+                      "ObservationType": {
+                        "const": "Presence/Absence"
+                      },
+                      "detailsOfObjectsOrFeaturesToDetect": {
+                        "type": "string",
+                        "description": "Details of objects/features to detect.",
+                        "example": "Missing components, color deviations"
+                      },
+                      "acceptableVarianceLevels": {
+                        "type": "string",
+                        "description": "Acceptable variance levels.",
+                        "example": "Variance up to 5%"
+                      }
+                    },
+                    "required": [
+                      "detailsOfObjectsOrFeaturesToDetect",
+                      "acceptableVarianceLevels"
+                    ]
+                  },
+                  {
+                    "properties": {
+                      "ObservationType": {
+                        "const": "OCR"
+                      },
+                      "fontTypesAndSizesToBeRecognized": {
+                        "type": "string",
+                        "description": "Font types and sizes to be recognized.",
+                        "example": "Arial, size 12"
+                      },
+                      "readingSpeedAndAccuracyRequirements": {
+                        "type": "string",
+                        "description": "Reading speed and accuracy requirements.",
+                        "example": "99% accuracy at 2 characters per second"
+                      }
+                    },
+                    "required": [
+                      "fontTypesAndSizesToBeRecognized",
+                      "readingSpeedAndAccuracyRequirements"
+                    ]
+                  },
+                  {
+                    "properties": {
+                      "ObservationType": {
+                        "const": "Code Reading"
+                      },
+                      "typesOfCodesToRead": {
+                        "type": "string",
+                        "description": "Types of codes to read (QR, Barcode).",
+                        "example": "QR Codes, UPC Barcodes"
+                      },
+                      "readingDistanceAndAngle": {
+                        "type": "string",
+                        "description": "Reading distance and angle.",
+                        "example": "Up to 30 cm, 45° angle"
+                      }
+                    },
+                    "required": [
+                      "typesOfCodesToRead",
+                      "readingDistanceAndAngle"
+                    ]
+                  },
+                  {
+                    "properties": {
+                      "ObservationType": {
+                        "const": "Mismatch Detection"
+                      },
+                      "specificFeaturesToCompareForMismatches": {
+                        "type": "string",
+                        "description": "Specific features to compare for mismatches.",
+                        "example": "Component shapes, color mismatches"
+                      },
+                      "toleranceLevelsForMismatches": {
+                        "type": "string",
+                        "description": "Tolerance levels for mismatches.",
+                        "example": "Tolerances up to 5%"
+                      }
+                    },
+                    "required": [
+                      "specificFeaturesToCompareForMismatches",
+                      "toleranceLevelsForMismatches"
+                    ]
+                  },
+                  {
+                    "properties": {
+                      "ObservationType": {
+                        "const": "Classification"
+                      },
+                      "categoriesOfClassesToBeIdentified": {
+                        "type": "string",
+                        "description": "Categories of classes to be identified.",
+                        "example": "Different product types, defect categories"
+                      },
+                      "featuresDefiningEachClass": {
+                        "type": "string",
+                        "description": "Features defining each class.",
+                        "example": "Shape, size, color patterns"
+                      }
+                    },
+                    "required": [
+                      "categoriesOfClassesToBeIdentified",
+                      "featuresDefiningEachClass"
+                    ]
+                  },
+                  {
+                    "properties": {
+                      "ObservationType": {
+                        "const": "Assembly Verification"
+                      },
+                      "checklistOfComponentsOrFeaturesToVerify": {
+                        "type": "string",
+                        "description": "Checklist of components or features to verify.",
+                        "example": "All screws, connectors in place"
+                      },
+                      "sequenceOfAssemblyToBeFollowed": {
+                        "type": "string",
+                        "description": "Sequence of assembly to be followed.",
+                        "example": "Step-by-step assembly verification"
+                      }
+                    },
+                    "required": [
+                      "checklistOfComponentsOrFeaturesToVerify",
+                      "sequenceOfAssemblyToBeFollowed"
+                    ]
+                  },
+                  {
+                    "properties": {
+                      "ObservationType": {
+                        "const": "Color Verification"
+                      },
+                      "colorStandardsOrSamplesToMatch": {
+                        "type": "string",
+                        "description": "Color standards or samples to match.",
+                        "example": "Pantone 300C"
+                      }
+                    },
+                    "required": [
+                      "colorStandardsOrSamplesToMatch"
+                    ]
+                  }
+                ]
+              }
+
+            },
+            "required": [
+              "ObservationName",
+              "DefectObservationDescription",
+              "SubFOV_Dimension",
+              "LocationForObservation",
+              "ObservationType",
+              "AccuracyAndPrecisionLevels",
+              "ObservationImageWithAnnotations"
+            ]
+          },
+          "Solution": {
+            "type": "object",
+            "properties": {
+              "ExistingSolutions": {
+                "type": "string",
+                "description": "Existing solutions that are available based on online research."
+              },
+              "DrawbackOfExistingSolutions": {
+                "type": "string",
+                "description": "Why a bespoke solution is required instead of using an off-the-shelf solution."
+              }
+            },
+            "required": [
+              "ExistingSolutions",
+              "DrawbackOfExistingSolutions"
+            ]
+          }
+    },
+    "required": [
+      "BIZ_OBJ",
+      "PROD_VARIANT_INFO",
+      "MATERIAL_HANDLING",
+      "SOFTWARE",
+      "CUSTOMER_DEPENDENCY",
+      "ACCEPTANCE",
+      "Observation",
+      "Solution"
+    ]
+  }  
